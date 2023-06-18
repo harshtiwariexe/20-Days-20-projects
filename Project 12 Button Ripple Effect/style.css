@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #136683, #3f8197, #639dad, #87b9c3, #abd6da);
+    margin: 0;
+}
+button{
+    background-color: #136683;
+    color: aliceblue;
+    border: 1px solid #136683;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    position: relative;
+}
+button:focus{
+    outline: none;
+}
+button .circle{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: aliceblue;
+    border-radius: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    animation: scale 0.5s ease-in;
+}
+@keyframes scale{
+    to{
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+}
